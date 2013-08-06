@@ -4,7 +4,7 @@ title: "Demo for bs-wizard Plugin"
 category : "GitHub Project"
 tags : [Wizard, CoffeeScript, Bootstrap, jQuery]
 css: [bs-wizard-min]
-js: [jQuery, jQuery.validate, bs-wizard, bs-wizard-demo]
+js: [jQuery.validate, bs-wizard, bs-wizard-demo]
 ---
 {% include JB/setup %}
 
@@ -14,8 +14,8 @@ js: [jQuery, jQuery.validate, bs-wizard, bs-wizard-demo]
   </p>
 </div>
 <div class="example">
-  <div class="bs-wizard">  
-    <div class="span3">
+  <div class="row bs-wizard">  
+    <div class="col-lg-3">
       <ol class="bs-wizard-sidebar">
         <li class="bs-wizard-todo bs-wizard-active"><a href="javascript:void(0)">Step1</a></li>
         <li class="bs-wizard-todo"><a href="javascript:void(0)">Step2</a></li>
@@ -23,12 +23,12 @@ js: [jQuery, jQuery.validate, bs-wizard, bs-wizard-demo]
       </ol>
     </div>
 
-    <div class="span9">
+    <div class="col-lg-9">
       <form method="get" action="" accept-charset="UTF-8">
       <div>
-        <div class="bs-step hide">
+        <div class="bs-step inv">
           <div>
-            <h3>First Step Header</h3>
+            <h3>First Step</h3>
           </div>
           <div class="bs-step-inner">
             <div>
@@ -43,9 +43,9 @@ js: [jQuery, jQuery.validate, bs-wizard, bs-wizard-demo]
           </div>
         </div>
 
-        <div class="bs-step hide">
+        <div class="bs-step inv">
           <div>
-            <h3>Second Step Header</h3>
+            <h3>Second Step</h3>
           </div>
           <div class="bs-step-inner">
             <div>
@@ -60,9 +60,9 @@ js: [jQuery, jQuery.validate, bs-wizard, bs-wizard-demo]
           </div>
         </div>
 
-        <div class="bs-step hide">
+        <div class="bs-step inv">
           <div>
-            <h3>Third Step Header</h3>
+            <h3>Third Step</h3>
           </div>
           <div class="bs-step-inner">
             <div>
@@ -97,6 +97,7 @@ js: [jQuery, jQuery.validate, bs-wizard, bs-wizard-demo]
 <p>
   Here is the basic html code:
 </p>
-<pre>  &lt;div class=&quot;bs-wizard&quot;&gt;  <br/>    &lt;div class=&quot;span3&quot;&gt;<br/>      &lt;ol class=&quot;bs-wizard-sidebar&quot;&gt;<br/>        &lt;li class=&quot;bs-wizard-todo bs-wizard-active&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Step1&lt;/a&gt;&lt;/li&gt;<br/>        &lt;li class=&quot;bs-wizard-todo&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Step2&lt;/a&gt;&lt;/li&gt;<br/>        &lt;li class=&quot;bs-wizard-todo&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Step3&lt;/a&gt;&lt;/li&gt;<br/>      &lt;/ol&gt;<br/>    &lt;/div&gt;<br/><br/>    &lt;div class=&quot;span9&quot;&gt;<br/>      &lt;form method=&quot;get&quot; action=&quot;&quot; accept-charset=&quot;UTF-8&quot;&gt;<br/>      &lt;div&gt;<br/>        &lt;div class=&quot;bs-step hide&quot;&gt;<br/>          &lt;div&gt;<br/>            &lt;h3&gt;First Step Header&lt;/h3&gt;<br/>          &lt;/div&gt;<br/>          &lt;div class=&quot;bs-step-inner&quot;&gt;<br/>            &lt;div&gt;<br/>              &lt;label for=&quot;field_1&quot;&gt;Field 1&lt;/label&gt; <br/>              &lt;input type=&quot;text&quot; value=&quot;&quot; size=&quot;30&quot; name=&quot;field_1&quot; id=&quot;field_1&quot; autofocus=&quot;autofocus&quot;&gt;<br/>            &lt;/div&gt;<br/><br/>            &lt;div&gt;<br/>              &lt;label for=&quot;field_2&quot;&gt;Field 2&lt;/label&gt; <br/>              &lt;input type=&quot;text&quot; value=&quot;&quot; size=&quot;30&quot; name=&quot;field_2&quot; id=&quot;field_2&quot;&gt;<br/>            &lt;/div&gt;<br/>          &lt;/div&gt;<br/>        &lt;/div&gt;<br/><br/>        &lt;div class=&quot;bs-step hide&quot;&gt;<br/>          &lt;div&gt;<br/>            &lt;h3&gt;Second Step Header&lt;/h3&gt;<br/>          &lt;/div&gt;<br/>          &lt;div class=&quot;bs-step-inner&quot;&gt;<br/>            &lt;div&gt;<br/>              &lt;label for=&quot;field_3&quot;&gt;Field 3&lt;/label&gt; <br/>              &lt;input type=&quot;text&quot; value=&quot;&quot; size=&quot;30&quot; name=&quot;field_3&quot; id=&quot;field_3&quot;&gt;<br/>            &lt;/div&gt;<br/><br/>            &lt;div&gt;<br/>              &lt;label for=&quot;field_4&quot;&gt;Field 4&lt;/label&gt; <br/>              &lt;input type=&quot;text&quot; value=&quot;&quot; size=&quot;30&quot; name=&quot;field_4&quot; id=&quot;field_4&quot;&gt;<br/>            &lt;/div&gt;<br/>          &lt;/div&gt;<br/>        &lt;/div&gt;<br/><br/>        &lt;div class=&quot;bs-step hide&quot;&gt;<br/>          &lt;div&gt;<br/>            &lt;h3&gt;Third Step Header&lt;/h3&gt;<br/>          &lt;/div&gt;<br/>          &lt;div class=&quot;bs-step-inner&quot;&gt;<br/>            &lt;div&gt;<br/>              &lt;label for=&quot;field_5&quot;&gt;Field 5&lt;/label&gt; <br/>              &lt;input type=&quot;text&quot; value=&quot;&quot; size=&quot;30&quot; name=&quot;field_5&quot; id=&quot;field_5&quot;&gt;<br/>            &lt;/div&gt;<br/><br/>            &lt;div&gt;<br/>              &lt;label for=&quot;field_6&quot;&gt;Field 6&lt;/label&gt; <br/>              &lt;input type=&quot;text&quot; value=&quot;&quot; size=&quot;30&quot; name=&quot;field_6&quot; id=&quot;field_6&quot;&gt;<br/>            &lt;/div&gt;<br/>            &lt;div&gt;<br/>              &lt;button class=&quot;btn&quot; type=&quot;reset&quot; id=&quot;last-back&quot;&gt;Go Back&lt;/button&gt;<br/>              &lt;input class=&quot;btn btn-primary submit-btn&quot; type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;<br/>            &lt;/div&gt;<br/>          &lt;/div&gt;<br/>        &lt;/div&gt;<br/>      &lt;/div&gt;<br/>      &lt;/form&gt; <br/>    &lt;/div&gt;<br/>  &lt;/div&gt;</pre>
+<pre>  &lt;div class=&quot;bs-wizard&quot;&gt;  <br/>    &lt;div class=&quot;span3&quot;&gt;<br/>      &lt;ol class=&quot;bs-wizard-sidebar&quot;&gt;<br/>        &lt;li class=&quot;bs-wizard-todo bs-wizard-active&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Step1&lt;/a&gt;&lt;/li&gt;<br/>        &lt;li class=&quot;bs-wizard-todo&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Step2&lt;/a&gt;&lt;/li&gt;<br/>        &lt;li class=&quot;bs-wizard-todo&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Step3&lt;/a&gt;&lt;/li&gt;<br/>      &lt;/ol&gt;<br/>    &lt;/div&gt;<br/><br/>    &lt;div class=&quot;span9&quot;&gt;<br/>      &lt;form method=&quot;get&quot; action=&quot;&quot; accept-charset=&quot;UTF-8&quot;&gt;<br/>      &lt;div&gt;<br/>        &lt;div class=&quot;bs-step hide&quot;&gt;<br/>          &lt;div&gt;<br/>            &lt;h3&gt;First Step &lt;/h3&gt;<br/>          &lt;/div&gt;<br/>          &lt;div class=&quot;bs-step-inner&quot;&gt;<br/>            &lt;div&gt;<br/>              &lt;label for=&quot;field_1&quot;&gt;Field 1&lt;/label&gt; <br/>              &lt;input type=&quot;text&quot; value=&quot;&quot; size=&quot;30&quot; name=&quot;field_1&quot; id=&quot;field_1&quot; autofocus=&quot;autofocus&quot;&gt;<br/>            &lt;/div&gt;<br/><br/>            &lt;div&gt;<br/>              &lt;label for=&quot;field_2&quot;&gt;Field 2&lt;/label&gt; <br/>              &lt;input type=&quot;text&quot; value=&quot;&quot; size=&quot;30&quot; name=&quot;field_2&quot; id=&quot;field_2&quot;&gt;<br/>            &lt;/div&gt;<br/>          &lt;/div&gt;<br/>        &lt;/div&gt;<br/><br/>        &lt;div class=&quot;bs-step hide&quot;&gt;<br/>          &lt;div&gt;<br/>            &lt;h3&gt;Second Step &lt;/h3&gt;<br/>          &lt;/div&gt;<br/>          &lt;div class=&quot;bs-step-inner&quot;&gt;<br/>            &lt;div&gt;<br/>              &lt;label for=&quot;field_3&quot;&gt;Field 3&lt;/label&gt; <br/>              &lt;input type=&quot;text&quot; value=&quot;&quot; size=&quot;30&quot; name=&quot;field_3&quot; id=&quot;field_3&quot;&gt;<br/>            &lt;/div&gt;<br/><br/>            &lt;div&gt;<br/>              &lt;label for=&quot;field_4&quot;&gt;Field 4&lt;/label&gt; <br/>              &lt;input type=&quot;text&quot; value=&quot;&quot; size=&quot;30&quot; name=&quot;field_4&quot; id=&quot;field_4&quot;&gt;<br/>            &lt;/div&gt;<br/>          &lt;/div&gt;<br/>        &lt;/div&gt;<br/><br/>        &lt;div class=&quot;bs-step hide&quot;&gt;<br/>          &lt;div&gt;<br/>            &lt;h3&gt;Third Step &lt;/h3&gt;<br/>          &lt;/div&gt;<br/>          &lt;div class=&quot;bs-step-inner&quot;&gt;<br/>            &lt;div&gt;<br/>              &lt;label for=&quot;field_5&quot;&gt;Field 5&lt;/label&gt; <br/>              &lt;input type=&quot;text&quot; value=&quot;&quot; size=&quot;30&quot; name=&quot;field_5&quot; id=&quot;field_5&quot;&gt;<br/>            &lt;/div&gt;<br/><br/>            &lt;div&gt;<br/>              &lt;label for=&quot;field_6&quot;&gt;Field 6&lt;/label&gt; <br/>              &lt;input type=&quot;text&quot; value=&quot;&quot; size=&quot;30&quot; name=&quot;field_6&quot; id=&quot;field_6&quot;&gt;<br/>            &lt;/div&gt;<br/>            &lt;div&gt;<br/>              &lt;button class=&quot;btn&quot; type=&quot;reset&quot; id=&quot;last-back&quot;&gt;Go Back&lt;/button&gt;<br/>              &lt;input class=&quot;btn btn-primary submit-btn&quot; type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;<br/>            &lt;/div&gt;<br/>          &lt;/div&gt;<br/>        &lt;/div&gt;<br/>      &lt;/div&gt;<br/>      &lt;/form&gt; <br/>    &lt;/div&gt;<br/>  &lt;/div&gt;
+</pre>
 
 
