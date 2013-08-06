@@ -1,0 +1,102 @@
+---
+layout: post
+title: "Demo for bs-wizard Plugin"
+category : "GitHub Project"
+tags : [Wizard, CoffeeScript, Bootstrap, jQuery]
+css: [bs-wizard-min]
+js: [jQuery, jQuery.validate, bs-wizard, bs-wizard-demo]
+---
+{% include JB/setup %}
+
+<div>
+  <p>
+  This is a demo page for GitHub project <a href="https://github.com/mingliangfeng/bs-wizard">bs-wizard</a>. Live example:
+  </p>
+</div>
+<div class="example">
+  <div class="bs-wizard">  
+    <div class="span3">
+      <ol class="bs-wizard-sidebar">
+        <li class="bs-wizard-todo bs-wizard-active"><a href="javascript:void(0)">Step1</a></li>
+        <li class="bs-wizard-todo"><a href="javascript:void(0)">Step2</a></li>
+        <li class="bs-wizard-todo"><a href="javascript:void(0)">Step3</a></li>
+      </ol>
+    </div>
+
+    <div class="span9">
+      <form method="get" action="" accept-charset="UTF-8">
+      <div>
+        <div class="bs-step hide">
+          <div>
+            <h3>First Step Header</h3>
+          </div>
+          <div class="bs-step-inner">
+            <div>
+              <label for="field_1">Field 1</label> 
+              <input type="text" value="" size="30" name="field_1" id="field_1" autofocus="autofocus">
+            </div>
+
+            <div>
+              <label for="field_2">Field 2</label> 
+              <input type="text" value="" size="30" name="field_2" id="field_2">
+            </div>
+          </div>
+        </div>
+
+        <div class="bs-step hide">
+          <div>
+            <h3>Second Step Header</h3>
+          </div>
+          <div class="bs-step-inner">
+            <div>
+              <label for="field_3">Field 3</label> 
+              <input type="text" value="" size="30" name="field_3" id="field_3">
+            </div>
+
+            <div>
+              <label for="field_4">Field 4</label> 
+              <input type="text" value="" size="30" name="field_4" id="field_4">
+            </div>
+          </div>
+        </div>
+
+        <div class="bs-step hide">
+          <div>
+            <h3>Third Step Header</h3>
+          </div>
+          <div class="bs-step-inner">
+            <div>
+              <label for="field_5">Field 5</label> 
+              <input type="text" value="" size="30" name="field_5" id="field_5">
+            </div>
+
+            <div>
+              <label for="field_6">Field 6</label> 
+              <input type="text" value="" size="30" name="field_6" id="field_6">
+            </div>
+            <div>
+              <button class="btn" type="reset" id="last-back">Go Back</button>
+              <input class="btn btn-primary submit-btn" type="submit" value="Submit" />
+            </div>
+          </div>
+        </div>
+      </div>
+      </form> 
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+<p>
+  To initialize the wizard, just do this:
+</p>
+<pre>
+    <code>$(function() {
+      $(".bs-wizard").bs_wizard();
+    });</code>
+</pre> 
+<p>
+  Here is the basic html code:
+</p>
+<pre>  &lt;div class=&quot;bs-wizard&quot;&gt;  <br/>    &lt;div class=&quot;span3&quot;&gt;<br/>      &lt;ol class=&quot;bs-wizard-sidebar&quot;&gt;<br/>        &lt;li class=&quot;bs-wizard-todo bs-wizard-active&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Step1&lt;/a&gt;&lt;/li&gt;<br/>        &lt;li class=&quot;bs-wizard-todo&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Step2&lt;/a&gt;&lt;/li&gt;<br/>        &lt;li class=&quot;bs-wizard-todo&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Step3&lt;/a&gt;&lt;/li&gt;<br/>      &lt;/ol&gt;<br/>    &lt;/div&gt;<br/><br/>    &lt;div class=&quot;span9&quot;&gt;<br/>      &lt;form method=&quot;get&quot; action=&quot;&quot; accept-charset=&quot;UTF-8&quot;&gt;<br/>      &lt;div&gt;<br/>        &lt;div class=&quot;bs-step hide&quot;&gt;<br/>          &lt;div&gt;<br/>            &lt;h3&gt;First Step Header&lt;/h3&gt;<br/>          &lt;/div&gt;<br/>          &lt;div class=&quot;bs-step-inner&quot;&gt;<br/>            &lt;div&gt;<br/>              &lt;label for=&quot;field_1&quot;&gt;Field 1&lt;/label&gt; <br/>              &lt;input type=&quot;text&quot; value=&quot;&quot; size=&quot;30&quot; name=&quot;field_1&quot; id=&quot;field_1&quot; autofocus=&quot;autofocus&quot;&gt;<br/>            &lt;/div&gt;<br/><br/>            &lt;div&gt;<br/>              &lt;label for=&quot;field_2&quot;&gt;Field 2&lt;/label&gt; <br/>              &lt;input type=&quot;text&quot; value=&quot;&quot; size=&quot;30&quot; name=&quot;field_2&quot; id=&quot;field_2&quot;&gt;<br/>            &lt;/div&gt;<br/>          &lt;/div&gt;<br/>        &lt;/div&gt;<br/><br/>        &lt;div class=&quot;bs-step hide&quot;&gt;<br/>          &lt;div&gt;<br/>            &lt;h3&gt;Second Step Header&lt;/h3&gt;<br/>          &lt;/div&gt;<br/>          &lt;div class=&quot;bs-step-inner&quot;&gt;<br/>            &lt;div&gt;<br/>              &lt;label for=&quot;field_3&quot;&gt;Field 3&lt;/label&gt; <br/>              &lt;input type=&quot;text&quot; value=&quot;&quot; size=&quot;30&quot; name=&quot;field_3&quot; id=&quot;field_3&quot;&gt;<br/>            &lt;/div&gt;<br/><br/>            &lt;div&gt;<br/>              &lt;label for=&quot;field_4&quot;&gt;Field 4&lt;/label&gt; <br/>              &lt;input type=&quot;text&quot; value=&quot;&quot; size=&quot;30&quot; name=&quot;field_4&quot; id=&quot;field_4&quot;&gt;<br/>            &lt;/div&gt;<br/>          &lt;/div&gt;<br/>        &lt;/div&gt;<br/><br/>        &lt;div class=&quot;bs-step hide&quot;&gt;<br/>          &lt;div&gt;<br/>            &lt;h3&gt;Third Step Header&lt;/h3&gt;<br/>          &lt;/div&gt;<br/>          &lt;div class=&quot;bs-step-inner&quot;&gt;<br/>            &lt;div&gt;<br/>              &lt;label for=&quot;field_5&quot;&gt;Field 5&lt;/label&gt; <br/>              &lt;input type=&quot;text&quot; value=&quot;&quot; size=&quot;30&quot; name=&quot;field_5&quot; id=&quot;field_5&quot;&gt;<br/>            &lt;/div&gt;<br/><br/>            &lt;div&gt;<br/>              &lt;label for=&quot;field_6&quot;&gt;Field 6&lt;/label&gt; <br/>              &lt;input type=&quot;text&quot; value=&quot;&quot; size=&quot;30&quot; name=&quot;field_6&quot; id=&quot;field_6&quot;&gt;<br/>            &lt;/div&gt;<br/>            &lt;div&gt;<br/>              &lt;button class=&quot;btn&quot; type=&quot;reset&quot; id=&quot;last-back&quot;&gt;Go Back&lt;/button&gt;<br/>              &lt;input class=&quot;btn btn-primary submit-btn&quot; type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;<br/>            &lt;/div&gt;<br/>          &lt;/div&gt;<br/>        &lt;/div&gt;<br/>      &lt;/div&gt;<br/>      &lt;/form&gt; <br/>    &lt;/div&gt;<br/>  &lt;/div&gt;</pre>
+
+
