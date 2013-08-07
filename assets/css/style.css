@@ -33,6 +33,10 @@ div.example .bs-wizard-sidebar {margin-top: 10px;}
 div.post-abstract .date {font-weight: bold;margin-bottom: 10px}
 div.post-abstract .page-header {margin-top: 10px; margin-bottom: 20px;}
 
+div.example select, div.example input[type="text"], div.example input[type="password"] {
+    width: 240px;
+}
+
 /* posts index */
 .post > h3.title {
   position: relative;
