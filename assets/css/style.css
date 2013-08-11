@@ -93,3 +93,23 @@ div.example select, div.example input[type="text"], div.example input[type="pass
   background: #57A957;
   border: 1px solid #4c964d;
   color: #FFF; }
+
+.popover.error-popover {
+    background-color: #F2DEDE;
+    border-color: #EED3D7;
+    box-shadow: none;
+    color: #B94A48;
+    cursor: pointer;
+    max-width: none;
+}
+.popover.error-popover .popover-content {
+    padding: 6px 14px;
+}
+.popover.error-popover.right .arrow {
+    border-right-color: #EED3D7;
+}
+.popover.error-popover.right .arrow:after {
+    border-right-color: #F2DEDE;
+}
+
+.post-abstract {padding-bottom: 20px;}
