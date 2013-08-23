@@ -8,22 +8,22 @@
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="//raw.github.com/aFarkas/html5shiv/master/dist/html5shiv.js"></script>
-      <script src="//raw.github.com/scottjehl/Respond/master/respond.min.js"></script>
+      <script type="text/javascript" src="//rawgithub.com/aFarkas/html5shiv/master/dist/html5shiv.js"></script>
+      <script type="text/javascript" src="//rawgithub.com/scottjehl/Respond/master/respond.min.js"></script>
     <![endif]-->
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script src="//raw.github.com/blairvanderhoof/gist-embed/master/gist-embed.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//rawgithub.com/blairvanderhoof/gist-embed/master/gist-embed.js"></script>
     {% for item in page.js %}
       {% if item == 'jQuery.validate' %}
-      <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+      <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
       {% elsif item == 'bs-wizard' %}
-      <script src="//raw.github.com/mingliangfeng/bs-wizard/master/dist/bs-wizard-min.js"></script>
+      <script type="text/javascript" src="//rawgithub.com/mingliangfeng/bs-wizard/master/dist/bs-wizard-min.js"></script>
       {% elsif item == 'jvb.popover' %}
-      <script src="//raw.github.com/mingliangfeng/jquery.validate.bootstrap.popover/master/dist/jquery.validate.bootstrap.popover.min.js"></script>
+      <script type="text/javascript" src="//rawgithub.com/mingliangfeng/jquery.validate.bootstrap.popover/master/dist/jquery.validate.bootstrap.popover.min.js"></script>
       {% else %}
-      <script src="{{ site.url }}/assets/js/{{ item }}.js"></script>
+      <script type="text/javascript" src="{{ site.url }}/assets/js/{{ item }}.js"></script>
       {% endif %}
     {% endfor %}
 
