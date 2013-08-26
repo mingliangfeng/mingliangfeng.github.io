@@ -113,3 +113,22 @@ div.example select, div.example input[type="text"], div.example input[type="pass
 }
 
 .post-abstract {padding-bottom: 20px;}
+
+.panel-heading h3.panel-title { margin-top: 0;}
+.bs-step-inner > .col-lg-6 {padding-left: 0;}
+#locale-wrapper {margin-left: 10px;}
+#locale-wrapper input, #locale-wrapper label {display: block; float: left;}
+#locale-wrapper input {padding-top:5px; margin-left: 15px;}
+#locale-wrapper label {margin-left: 5px; font-weight: normal;}
+
+#website-pages.table-condensed thead > tr > th {font-weight: normal;}
+#website-pages.table-condensed thead > tr > th:first-child,
+#website-pages.table-condensed tbody > tr > td:first-child {
+  padding-left: 0;
+}
+#website-pages.table-condensed tbody > tr > td.i-td {padding-top: 10px;}
+.bs-step-inner h3 {
+  font-size: 14px;
+  font-weight: bold;
+}
+.info-td {width: 200px;}
