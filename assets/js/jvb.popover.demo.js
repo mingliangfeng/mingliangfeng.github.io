@@ -8,4 +8,8 @@ $(function() {
 
   	return false;
   });
+
+  $(window).resize(function() {
+		$.validator.reposition();
+	});
 });
