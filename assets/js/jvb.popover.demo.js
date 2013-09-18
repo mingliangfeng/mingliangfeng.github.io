@@ -1,5 +1,5 @@
 $(function() {
-  $('#signin-form').validate_popover({onsubmit: false});
+  $('#signin-form').validate_popover({onsubmit: false, popoverPosition: 'top'});
 
   $(".submit-btn").click(function(ev) {
   	ev.preventDefault();
