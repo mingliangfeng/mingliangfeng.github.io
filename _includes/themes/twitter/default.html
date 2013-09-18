@@ -50,34 +50,40 @@
   </head>
 
   <body>
-    
-    <div class="navbar navbar-inverse navbar-fixed-top my-nav-bar">
+    <header role="banner" class="navbar navbar-inverse navbar-fixed-top my-nav-bar">
+      <div class="row top-banner">
+        <div></div><div></div><div></div><div></div>
+      </div>
       <div class="container">
-        <button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
-        <div class="nav-collapse bs-navbar-collapse in" style="height: auto;">
+        <div class="navbar-header">
+          <button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle collapsed">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Andrew Feng</a>
+        </div>
+        <nav role="navigation" class="navbar-collapse bs-navbar-collapse collapse">
           <ul class="nav navbar-nav">
             {% assign pages_list = site.pages %}
             {% assign group = 'navigation' %}
             {% include JB/pages_list %}
           </ul>
-        </div>
+        </nav>
       </div>
-    </div>
-    <div class="clearfix"></div>
+    </header>
 
-    <div class="container">
+    <div class="container body-container">
 
       <div class="content">
         {{ content }}
       </div>
       <hr>
       <footer>
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.website }}
+        <p>
+          &copy; {{ site.time | date: '%Y' }} {{ site.author.website }}
+          <a href="https://github.com/{{site.author.github}}"><i class="icon-github-alt"></i></a>
         </p>
       </footer>
 

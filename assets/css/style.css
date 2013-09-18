@@ -1,10 +1,37 @@
 body {
     padding-top: 50px;
     position: relative;
+    background-color: #79C3D2;
 }
+hr {
+  border-color: rgba(0, 49, 79, 0.08);
+}
+a {color: #143352;}
 .inv {display: none;}
+.top-banner {height: 2px;background-color: #66BBCC;}
+.top-banner div {height: 2px; width: 25%; float:left;}
+.top-banner div:nth-child(1) {background-color: #DB757F; }
+.top-banner div:nth-child(2) {background-color: #D9EEF2; }
+.top-banner div:nth-child(3) {background-color: #87BBC5; }
+.top-banner div:nth-child(4) {background-color: #E2E2B1; }
+.container.body-container {
+    background-color: #D9EEF2;
+    border-color: -moz-use-text-color #53B2C6;
+    border-image: none;
+    border-style: none dashed;
+    border-width: 0 2px;
+    box-shadow: 1px 0 6px rgba(0, 0, 0, 0.5);
+    color: #143352;
+    margin: 30px auto 20px;
+    padding: 20px 30px 30px;
+}
+.page-header {
+    border-bottom: 1px solid rgba(0, 49, 79, 0.08);
+}
 .my-nav-bar {
-    background-color: #563D7C;
+    background-color: #143352;
+    border-bottom: 2px solid rgba(15, 38, 61, 0.5);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 }
 .my-nav-bar .navbar-nav > li > a {
     color: #CDBFE3;
@@ -24,7 +51,7 @@ body {
     border-color: #463265;
 }
 div.example {
-	border: 2px dotted #EEEEEE;
+	border: 2px dotted rgba(0, 49, 79, 0.08);
   margin-bottom: 20px;
   padding: 20px;
 }
@@ -110,6 +137,14 @@ div.example select, div.example input[type="text"], div.example input[type="pass
 }
 .popover.error-popover.right .arrow:after {
     border-right-color: #F2DEDE;
+}
+
+.popover.error-popover.top .arrow {
+    border-top-color: #EED3D7;
+    left: 30px;
+}
+.popover.error-popover.top .arrow:after {
+    border-top-color: #F2DEDE;
 }
 
 .post-abstract {padding-bottom: 20px;}
