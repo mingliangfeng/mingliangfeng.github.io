@@ -1,0 +1,83 @@
+---
+layout: post
+title: "jquery.validate.bootstrap.popover on Model"
+category : "GitHub Project"
+tags : [CoffeeScript, Bootstrap, Popover, jQuery, Validate, Model]
+css: []
+js: [jQuery.validate, jvb.popover, jvb.popover.demo2]
+---
+{% include JB/setup %}
+
+<div>
+  <p>
+  This is a demo page for GitHub project <a href="https://github.com/mingliangfeng/jquery.validate.bootstrap.popover">jquery.validate.bootstrap.popover
+</a> on Model diagram. Live example:
+  </p>
+</div>
+<div class="example">
+  <button type="button" class="btn btn-primary" id="model-launch">Launch demo modal</button>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Please fill in your details</h4>
+        </div>
+        <div class="modal-body">
+          <form id="signin-form" method="get" action="" accept-charset="UTF-8">
+            <fieldset>
+              <div class="form-group">
+                <label for="client_email">Email</label> 
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="icon-envelope"></i></span>
+                  <input type="text" id="client_email" name="client[email]" class="required email form-control" placeholder="Your Email" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="client_password">Password</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="icon-key"></i></span>
+                  <input type="password" id="client_password" name="client[password]" class="required form-control" placeholder="Your Password" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                 <label for="language">Language</label>
+                 <div class="input-group">
+                   <select class="form-control required" id="language" name="language" data-popover-position="right" data-popover-offset="0,15">
+                     <option value="">Please Choose...</option>
+                     <option value="en">English</option>
+                     <option value="zh-CN">Simple Chinese</option>
+                   </select>
+                 </div>
+              </div>
+
+              <input class="btn btn-primary submit-btn" type="submit" value="Submit" />
+            </fieldset>
+          </form> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <div class="clearfix"></div>
+</div>
+<p>
+  To initialize the validator:
+</p>
+<pre>
+    <code>$('#signin-form').validate_popover({onsubmit: false, popoverPosition: 'top'});</code>
+</pre>
+<p>
+  To dismiss all error popovers when Model is closed:
+</p>
+<pre>
+    $('#myModal').on('hide.bs.modal', function () {
+      $.validator.hide_validate_popover($("#client_email, #client_password, #language"));
+    });
+</pre>
