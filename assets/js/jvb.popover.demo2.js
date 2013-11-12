@@ -16,5 +16,11 @@ $(function() {
 			$.validator.hide_validate_popover($("#client_email, #client_password, #language"));
 		});
 
+		$(window).resize(function() {
+			$.validator.reposition();
+		});
+
+		$(".modal").on("scroll", function() { $.validator.reposition(); });
+
   });
 });

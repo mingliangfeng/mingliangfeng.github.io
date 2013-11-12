@@ -104,4 +104,8 @@ $(function() {
     validate_fields($('#agreeToTheTerms'), 4);
   }
 
+  $(window).resize(function() {
+      $.validator.reposition();
+  });
+
 });
